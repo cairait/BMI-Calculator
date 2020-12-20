@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+<title>
+    BMI Calculator
+</title>
+
+<link rel="stylesheet" type="text/css" href="static/style.css">
+
+
+</head>
+
+<body>
+<h1>BMI Calculator</h1>
+
+<div>
+    <p>Please enter your weight(pounds) and height(inches)</p>
+
+    <form method="POST" action="/">
+    Weight:<br>
+    <input type="text" name="weight"><br>
+    Height:<br>
+    <input type="text" name="height"><br>
+
+    <button type="submit" value="submit">Submit</button>
+    
+    </form>
+
+
+</div>
+
+<div>
+    {% if weight %}
+        <p>Your weight is {{ weight }} kilograms.</p>
+        <p>Your height is {{ height }} meters.</p>
+        <p>Your body mass index is {{ bmi }}.</p>
+
+    {% endif %}
+</div>
+
+</body>
